@@ -3,6 +3,10 @@ from flask import Flask
 app = Flask(__name__)
 
 
+def add(a, b):
+    return a + b
+
+
 @app.route("/")
 def home():
     return "Hello from Harness CI/CD!"
@@ -10,7 +14,7 @@ def home():
 
 @app.route("/add")
 def addition():
-    return {"result": 2 + 3}
+    return {"result": add(2, 3)}
 
 
 if __name__ == "__main__":
