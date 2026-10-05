@@ -1,0 +1,16 @@
+family: devops-app
+networkMode: awsvpc
+requiresCompatibilities:
+  - FARGATE
+cpu: "256"
+memory: "512"
+executionRoleArn: arn:aws:iam::536055838386:role/ecsTaskExecutionRole
+
+containerDefinitions:
+  - name: devops-app
+    image: <+artifact.image>
+    essential: true
+    portMappings:
+      - containerPort: 5000
+        hostPort: 5000
+        protocol: tcp
