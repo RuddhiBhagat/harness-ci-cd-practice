@@ -1,7 +1,17 @@
-def add(a, b):
-    return a + b
+from flask import Flask
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return "Hello from Harness CI/CD!"
+
+
+@app.route("/add")
+def addition():
+    return {"result": 2 + 3}
 
 
 if __name__ == "__main__":
-    print("Hello from Harness CI/CD!")
-    print("2 + 3 =", add(2, 3))
+    app.run(host="0.0.0.0", port=5000)
