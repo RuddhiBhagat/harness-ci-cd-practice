@@ -1,12 +1,11 @@
-serviceDefinition:
-  serviceName: devops-ecs-service
-  desiredCount: 1
-  launchType: FARGATE
-  platformVersion: LATEST
-  networkConfiguration:
-    awsvpcConfiguration:
-      assignPublicIp: ENABLED
-      subnets:
-        - subnet-0aee7bb29c44b5fcf
-      securityGroups:
-        - sg-060772e1eee7de9be
+serviceName: devops-ecs-service
+desiredCount: 1
+launchType: FARGATE
+platformVersion: LATEST
+networkConfiguration:
+  awsvpcConfiguration:
+    assignPublicIp: ENABLED
+    subnets:
+      - subnet-0aee7bb29c44b5fcf
+    securityGroups:
+      - sg-060772e1eee7de9be
