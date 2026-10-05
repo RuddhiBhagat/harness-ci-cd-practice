@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install pytest
+RUN pip install flask pytest
 
 CMD ["python", "app.py"]
